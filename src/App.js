@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import HeaderComp from "./components/Header";
+import SidebarComp from "./components/Sidebar";
 function App() {
   return (
     <div className="app">
-      <h1>hello world</h1>
-
       <HeaderComp />
+      <div className="app_body">
+        <SidebarComp />
+      </div>
     </div>
   );
 }
