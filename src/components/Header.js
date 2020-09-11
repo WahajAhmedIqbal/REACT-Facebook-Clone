@@ -12,7 +12,7 @@ import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Header() {
+function Header({ src }) {
   return (
     <div className="header">
       <div className="header_left">
