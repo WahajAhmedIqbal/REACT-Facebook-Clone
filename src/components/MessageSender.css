@@ -28,3 +28,33 @@
 .messageSender_top > from > button {
   display: none;
 }
+/* @media (max-width: 1200px) {
+  .messageSender_top > form > button {
+    display: visible;
+  }
+} */
+.messageSender_input {
+  flex: 1;
+}
+.messageSender_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.messageSender_option {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin: 5px;
+}
+.messageSender_option > h3 {
+  font-size: medium;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.messageSender_option:hover {
+  background-color: #eff2f5;
+  border-radius: 20px;
+}
