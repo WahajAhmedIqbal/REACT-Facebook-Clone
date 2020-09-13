@@ -9,6 +9,9 @@ function Feed() {
     <div className="feed">
       <StoryReelComp />
       <MessageSender />
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 }
