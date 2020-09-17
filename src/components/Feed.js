@@ -3,7 +3,8 @@ import "./Feed.css";
 import StoryReelComp from "./StoryReel";
 import MessageSender from "./MessageSender";
 import Post from "./Post";
-import db from "../firebase";
+import db from '../firebase'
+
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -14,7 +15,7 @@ function Feed() {
       .onSnapshot((snapshot) =>
         setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
       );
-  }, []);
+  } , []);
 
   return (
     <div className="feed">
@@ -24,7 +25,7 @@ function Feed() {
       {posts.map((post) => (
         <Post
           key={post.id}
-          porfilePic={post.data.porfilePic}
+          profilePic={post.data.profilePic}
           message={post.data.message}
           timestamp={post.data.timestamp}
           username={post.data.username}

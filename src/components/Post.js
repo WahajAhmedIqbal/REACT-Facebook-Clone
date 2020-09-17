@@ -16,9 +16,11 @@ function Post({ porfilePic, image, username, timestamp, message }) {
           <h3>{username}</h3>
           <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
         </div>
-        <p>{message}</p>
       </div>
       <div className="post_bottom">
+        <p>{message}</p>
+      </div>
+      <div className="post_image">
         <p>
           <img src={image}></img>
         </p>

@@ -12,13 +12,14 @@ function MessageSender() {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [{ user }, dispatch] = useStateValue();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     db.collection("posts").add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      profilePic: user.photoURL,
+      profiePic: user.photoURL,
       username: user.displayName,
       image: imageUrl,
     });
@@ -44,7 +45,7 @@ function MessageSender() {
             type="text"
             placeholder="image URL (optional)"
           />
-          <button onClick={handleSubmit} type="submit">
+          <button onClick={handleSubmit} type="submit" type="submit">
             Hidden Submit
           </button>
         </from>
