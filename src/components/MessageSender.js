@@ -19,7 +19,7 @@ function MessageSender() {
     db.collection("posts").add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      profiePic: user.photoURL,
+      profilePic: user.photoURL,
       username: user.displayName,
       image: imageUrl,
     });
@@ -31,7 +31,7 @@ function MessageSender() {
     <div className="messageSender">
       <div className="messageSender_top">
         <Avatar src={user.photoURL} />
-        <from>
+        <form>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -48,7 +48,7 @@ function MessageSender() {
           <button onClick={handleSubmit} type="submit" type="submit">
             Hidden Submit
           </button>
-        </from>
+        </form>
       </div>
 
       <div className="messageSender_bottom">

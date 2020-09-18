@@ -12,11 +12,11 @@
   border-bottom: 1px solid #eff2f5;
   padding: 15px;
 }
-.messageSender_top > from {
+.messageSender_top > form {
   flex: 1;
   display: flex;
 }
-.messageSender_top > from > input {
+.messageSender_top > form > input {
   outline-width: 0;
   border: none;
   padding: 5px 20px;
@@ -25,7 +25,7 @@
   background-color: #eff2f5;
 }
 
-.messageSender_top > from > button {
+.messageSender_top > form > button {
   display: none;
 }
 /* @media (max-width: 1200px) {

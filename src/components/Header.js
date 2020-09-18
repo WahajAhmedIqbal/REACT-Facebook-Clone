@@ -19,10 +19,10 @@ function Header({ src }) {
   return (
     <div className="header">
       <div className="header_left">
-        {/* <img
+        <img
           alt="logo"
           src="http://www.pngplay.com/wp-content/uploads/3/Facebook-Logo-PNG-Clipart-Background.png"
-        /> */}
+        />
         <div className="header_input">
           <SearchIcon />
           <input type="text" placeholder="Search..."></input>
