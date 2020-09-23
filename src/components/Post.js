@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 import "./Post.css";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+// import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import NearMeIcon from "@material-ui/icons/NearMe";
 import { ExpandMoreOutlined } from "@material-ui/icons";
+import Facebookemoji from "./Reaction";
 
 function Post({ profilePic, image, username, timestamp, message }) {
+  const [like, setLike] = useState(false);
+
   return (
     <div className="post">
       <div className="post_top">
@@ -26,8 +29,9 @@ function Post({ profilePic, image, username, timestamp, message }) {
         </p>
       </div>
       <div className="post_options">
-        <div className="post_option">
-          <ThumbUpIcon />
+        <div className="likebutton">
+          {/* <ThumbUpIcon /> */}
+          <Facebookemoji />
           <p>Like</p>
         </div>
         <div className="post_option">

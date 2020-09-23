@@ -1,9 +1,17 @@
 import React from "react";
+import FacebookEmoji from "react-facebook-emoji";
+import "./Reaction.css";
 
 function Reaction() {
   return (
-    <div>
-      <h2>Rection components</h2>
+    <div className="likeemoji">
+      <FacebookEmoji type="like" />
+      <FacebookEmoji type="love" />
+      <FacebookEmoji type="wow" />
+      <FacebookEmoji type="yay" />
+      <FacebookEmoji type="angry" />
+      <FacebookEmoji type="haha" />
+      <FacebookEmoji type="sad" />
     </div>
   );
 }
