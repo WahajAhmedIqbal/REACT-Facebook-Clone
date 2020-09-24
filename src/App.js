@@ -4,15 +4,15 @@ import HeaderComp from "./components/Header";
 import SidebarComp from "./components/Sidebar";
 import FeedComp from "./components/Feed";
 import Widgets from "./components/Widgets";
-import Login from "./components/Login";
-import { useStateValue } from "./components/StateProvider";
+// import Login from "./components/Login";
+// import { useStateValue } from "./components/StateProvider";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  // const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="app">
-      {!user ? (
+      {/* {!user ? (
         <Login />
       ) : (
         <>
@@ -23,7 +23,15 @@ function App() {
             <Widgets />
           </div>
         </>
-      )}
+      )} */}
+      <>
+        <HeaderComp />
+        <div className="app_body">
+          <SidebarComp />
+          <FeedComp />
+          <Widgets />
+        </div>
+      </>
     </div>
   );
 }

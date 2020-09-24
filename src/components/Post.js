@@ -9,7 +9,11 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 import Facebookemoji from "./Reaction";
 
 function Post({ profilePic, image, username, timestamp, message }) {
-  const [like, setLike] = useState(false);
+  // const [like, setLike] = useState(false);
+
+  // cosnt handleclick = () => {
+
+  // }
 
   return (
     <div className="post">
@@ -31,7 +35,7 @@ function Post({ profilePic, image, username, timestamp, message }) {
       <div className="post_options">
         <div className="likebutton">
           {/* <ThumbUpIcon /> */}
-          <Facebookemoji />
+          <Facebookemoji className="emoji" />
           <p>Like</p>
         </div>
         <div className="post_option">
