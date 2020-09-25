@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 import "./Post.css";
-// import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import NearMeIcon from "@material-ui/icons/NearMe";
@@ -9,11 +9,11 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 import Facebookemoji from "./Reaction";
 
 function Post({ profilePic, image, username, timestamp, message }) {
-  // const [like, setLike] = useState(false);
+  const [emoji, setEmoji] = useState(false);
 
-  // cosnt handleclick = () => {
-
-  // }
+  // const handleemoji = () => {
+  //   setEmoji(<Facebookemoji />);
+  // };
 
   return (
     <div className="post">
@@ -32,10 +32,19 @@ function Post({ profilePic, image, username, timestamp, message }) {
           <img style={{ width: "100%" }} src={image}></img>
         </p>
       </div>
+
       <div className="post_options">
-        <div className="likebutton">
-          {/* <ThumbUpIcon /> */}
-          <Facebookemoji className="emoji" />
+        <div
+          onMouseEnter={() => setEmoji(true)}
+          onMouseLeave={() => setEmoji(true)}
+          className="likeemoji"
+        >
+          {emoji && (
+            <span className="facebookemojiset">
+              <Facebookemoji />
+            </span>
+          )}
+          <ThumbUpIcon />
           <p>Like</p>
         </div>
         <div className="post_option">
