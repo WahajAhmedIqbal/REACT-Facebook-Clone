@@ -5,13 +5,13 @@ import "./Reaction.css";
 function Reaction() {
   return (
     <div className="like_emoji">
-      <FacebookEmoji className="emo" type="like" />
-      <FacebookEmoji type="love" className="emo" />
-      <FacebookEmoji type="wow" className="emo" />
-      <FacebookEmoji className="emo" type="yay" />
-      <FacebookEmoji className="emo" type="angry" />
-      <FacebookEmoji className="emo" type="haha" />
-      <FacebookEmoji className="emo" type="sad" />
+      <FacebookEmoji type="like" />
+      <FacebookEmoji type="love" />
+      <FacebookEmoji type="wow" />
+      <FacebookEmoji type="yay" />
+      <FacebookEmoji type="angry" />
+      <FacebookEmoji type="haha" />
+      <FacebookEmoji type="sad" />
     </div>
   );
 }

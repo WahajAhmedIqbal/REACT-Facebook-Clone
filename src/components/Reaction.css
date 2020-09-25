@@ -9,3 +9,6 @@
   margin-top: -100px;
   margin-left: -74px;
 }
+.like_emoji > .emo1:hover {
+  transform: scale(1.07);
+}
