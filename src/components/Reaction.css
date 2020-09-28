@@ -1,14 +1,14 @@
 /* .like_emoji {
   display: none;
 } */
-.like_emoji {
+.emoji_set {
   display: flex;
   position: absolute;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   border-radius: 20px;
-  margin-top: -100px;
+  margin-top: -81px;
   margin-left: -74px;
 }
-.like_emoji > .emo1:hover {
-  transform: scale(1.07);
+.emoji_set .zama-emoji:hover {
+  transform: scale(0.6);
 }

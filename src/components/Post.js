@@ -11,10 +11,6 @@ import Facebookemoji from "./Reaction";
 function Post({ profilePic, image, username, timestamp, message }) {
   const [emoji, setEmoji] = useState(false);
 
-  // const handleemoji = () => {
-  //   setEmoji(<Facebookemoji />);
-  // };
-
   return (
     <div className="post">
       <div className="post_top">
@@ -36,7 +32,8 @@ function Post({ profilePic, image, username, timestamp, message }) {
       <div className="post_options">
         <div
           onMouseEnter={() => setEmoji(true)}
-          onMouseLeave={() => setEmoji(true)}
+          onMouseLeave={() => setEmoji(false)}
+          // onClick={() => setEmoji(!false)}
           className="likeemoji"
         >
           {emoji && (

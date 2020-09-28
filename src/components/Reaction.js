@@ -4,7 +4,7 @@ import "./Reaction.css";
 
 function Reaction() {
   return (
-    <div className="like_emoji">
+    <div className="emoji_set">
       <FacebookEmoji type="like" />
       <FacebookEmoji type="love" />
       <FacebookEmoji type="wow" />

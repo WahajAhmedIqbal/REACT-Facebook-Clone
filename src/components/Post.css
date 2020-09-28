@@ -73,6 +73,6 @@
 .facebookemojiset {
   background-color: sandybrown;
 }
-/* .facebookemojiset:hover {
+.emoji_like:hover {
   transform: scale(1.07);
-} */
+}
