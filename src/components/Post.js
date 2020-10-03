@@ -10,7 +10,12 @@ import Facebookemoji from "./Reaction";
 
 function Post({ profilePic, image, username, timestamp, message }) {
   const [emoji, setEmoji] = useState(false);
+  const [likesCounter, setLikesCounter] = useState(0);
 
+  const likecounterfun = () => {
+    let setcounter = likesCounter + 1;
+    setLikesCounter(setcounter);
+  };
   return (
     <div className="post">
       <div className="post_top">
@@ -37,12 +42,12 @@ function Post({ profilePic, image, username, timestamp, message }) {
           className="likeemoji"
         >
           {emoji && (
-            <span className="facebookemojiset">
+            <span className="facebookemojiset" onClick={likecounterfun}>
               <Facebookemoji />
             </span>
           )}
-          <ThumbUpIcon />
-          <p>Like</p>
+          <ThumbUpIcon onClick={likecounterfun} />
+          <p onClick={likecounterfun}>Like {likesCounter}</p>
         </div>
         <div className="post_option">
           <ChatBubbleOutlineIcon />
