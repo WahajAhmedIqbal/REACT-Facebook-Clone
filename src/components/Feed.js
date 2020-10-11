@@ -3,9 +3,9 @@ import "./Feed.css";
 import StoryReelComp from "./StoryReel";
 import MessageSender from "./MessageSender";
 import Post from "./Post";
-import db from "../firebase";
+import { db } from "../firebase";
 
-function Feed() {
+function Feed({ user }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Feed() {
   return (
     <div className="feed">
       <StoryReelComp />
-      <MessageSender />
+      <MessageSender user= {user} />
 
       {posts.map((post) => (
         <Post
